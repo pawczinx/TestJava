@@ -26,9 +26,9 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Label layoutX="200.0" layoutY="165.0" prefHeight="50.0" prefWidth="400.0" text="PYTANIA NA KTÓRE ODPOWIEDZIAŁEŚ BŁĘDNIE:">
+      <Label alignment="CENTER" layoutX="200.0" layoutY="165.0" prefHeight="50.0" prefWidth="400.0" text="PYTANIA NA KTÓRE ODPOWIEDZIAŁEŚ BŁĘDNIE:">
          <font>
-            <Font name="System Bold" size="17.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
      

@@ -9,12 +9,16 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.RadioButton;
 import javafx.scene.layout.Pane;
 
 public class ApplicationController {
 private MainController mainController;
 
+private static double progressBarCount=0.0;
+@FXML
+private ProgressBar progressBar;
 private static List<String> wrongAnswers = new ArrayList<>();
 private List<String> pytania = LoadScreenController.getLista();
 @FXML
@@ -27,7 +31,7 @@ private Label qNumber, answerA,answerB, answerC, answerD, correctAnswer;
 
 @FXML
 private Button nextButton,saveButton;
-private static int points=0,countQuestions=0;
+private static int points=0,countQuestions=0,countNumberOfQuestions=0;
 private static Boolean ifCorrect=false;
 @FXML
 public void saveAnswer(){
@@ -45,7 +49,7 @@ public void saveAnswer(){
 		}
 		
 		radioA.setDisable(true);radioB.setDisable(true);radioC.setDisable(true);radioD.setDisable(true);
-
+		setProgressBar();
 	++countQuestions;
 	//System.out.println(checkIfTrueAnswer());
 	//System.out.println(points);
@@ -154,10 +158,16 @@ public void loadQuestions(){
 
 @FXML 
 public void initialize(){
-	
+	countNumberOfQuestions=(pytania.size()/6);//rozmiar tablicy pytan i obliczenie iloœci pytañ
+	progressBarCount=0.0;
 	loadQuestions();
 	nextButton.setDisable(true);
 	correctAnswer.setVisible(false);
+}
+
+public void setProgressBar() {
+	progressBarCount+=1;
+	progressBar.setProgress(progressBarCount/countNumberOfQuestions);
 }
 @FXML
 public void isSelectedA(){
