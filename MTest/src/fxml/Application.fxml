@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: LIGHTGRAY;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pc.controllers.ApplicationController">
+   <children>
+      <GridPane layoutX="100.0" layoutY="150.0" prefHeight="300.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="357.0" minWidth="10.0" prefWidth="68.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0" minWidth="0.0" prefWidth="525.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <RadioButton fx:id="radioA" mnemonicParsing="false" onAction="#isSelectedA" prefHeight="75.0" prefWidth="75.0" text="A">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="radioB" mnemonicParsing="false" onAction="#isSelectedB" prefHeight="75.0" prefWidth="75.0" text="B" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="radioC" mnemonicParsing="false" onAction="#isSelectedC" prefHeight="75.0" prefWidth="75.0" text="C" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="radioD" mnemonicParsing="false" onAction="#isSelectedD" prefHeight="75.0" prefWidth="75.0" text="D" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></RadioButton>
+            <Label fx:id="answerA" prefHeight="75.0" prefWidth="500.0" style="-fx-background-color: LIGHTGRAY;" text="Odp A" GridPane.columnIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></Label>
+            <Label fx:id="answerB" prefHeight="75.0" prefWidth="500.0" style="-fx-background-color: LIGHTGRAY;" text="Odp B" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="answerC" prefHeight="75.0" prefWidth="500.0" style="-fx-background-color: LIGHTGRAY;" text="Odp C" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></Label>
+            <Label fx:id="answerD" prefHeight="75.0" prefWidth="500.0" style="-fx-background-color: LIGHTGRAY;" text="Odp D" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></Label>
+         </children>
+      </GridPane>
+      <Label fx:id="qNumber" alignment="CENTER" layoutX="100.0" layoutY="25.0" prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: LIGHTGRAY;" text="NR PYTANIA I TREŚĆ">
+         <font>
+            <Font name="System Italic" size="21.0" />
+         </font></Label>
+      <Label fx:id="correctAnswer" layoutX="435.0" layoutY="569.0" prefHeight="17.0" prefWidth="286.0" text="POPRAWNA" />
+      <Button fx:id="saveButton" layoutX="175.0" layoutY="500.0" mnemonicParsing="false" onAction="#saveAnswer" prefHeight="50.0" prefWidth="150.0" text="ZAPISZ">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Button>
+      <Button fx:id="nextButton" layoutX="400.0" layoutY="500.0" mnemonicParsing="false" onAction="#nextQuestion" prefHeight="50.0" prefWidth="150.0" text="NASTĘPNE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Button>
+      <Label fx:id="labelInfoAnswer" layoutX="177.0" layoutY="560.0" text="">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

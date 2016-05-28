@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: LIGHTGRAY;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pc.controllers.FinishScreenController">
+   <children>
+      <Label fx:id="finalScore" alignment="CENTER" layoutX="300.0" layoutY="100.0" prefHeight="75.0" prefWidth="200.0" text="Liczba">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <TextArea fx:id="tekscik" layoutX="200.0" layoutY="225.0" prefHeight="350.0" prefWidth="400.0" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font></TextArea>
+      <Label alignment="CENTER" layoutX="200.0" layoutY="25.0" prefHeight="75.0" prefWidth="400.0" text="LICZBA ZDOBYTYCH PUNKTÓW:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="25.0" layoutY="525.0" mnemonicParsing="false" onAction="#onMenu" prefHeight="50.0" prefWidth="100.0" text="MENU">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="200.0" layoutY="165.0" prefHeight="50.0" prefWidth="400.0" text="PYTANIA NA KTÓRE ODPOWIEDZIAŁEŚ BŁĘDNIE:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+     
+   </children>
+</Pane>
