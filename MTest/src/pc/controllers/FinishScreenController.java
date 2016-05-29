@@ -43,6 +43,8 @@ public void initialize(){
 	writeWrongAnswers();
 	tekscik.setWrapText(true);
 	tekscik.setEditable(false);
+	applicationController.setPoints(0);
+	applicationController.setCountQuestions(0);
 }
 
 public void writeWrongAnswers(){

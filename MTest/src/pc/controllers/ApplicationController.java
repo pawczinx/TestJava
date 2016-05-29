@@ -158,11 +158,24 @@ public void loadQuestions(){
 
 @FXML 
 public void initialize(){
+	countNumberOfQuestions=0;
 	countNumberOfQuestions=(pytania.size()/6);//rozmiar tablicy pytan i obliczenie iloœci pytañ
 	progressBarCount=0.0;
 	loadQuestions();
 	nextButton.setDisable(true);
 	correctAnswer.setVisible(false);
+}
+
+public static void setCountQuestions(int countQuestions) {
+	ApplicationController.countQuestions = countQuestions;
+}
+
+public static int getCountQuestions() {
+	return countQuestions;
+}
+
+public static void setPoints(int points) {
+	ApplicationController.points = points;
 }
 
 public void setProgressBar() {
