@@ -34,7 +34,7 @@
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" onAction="#load" text="Zaloguj się" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button mnemonicParsing="false" onAction="#Login" text="Zaloguj się" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
