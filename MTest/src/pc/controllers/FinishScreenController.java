@@ -1,14 +1,21 @@
 package pc.controllers;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
+import pc.main.SqliteConnection;
 
 public class FinishScreenController {
+	
+	Connection connection;
+	PreparedStatement pst = null;
+	
 @FXML
 private Label finalScore;
 private ApplicationController applicationController;
@@ -45,6 +52,8 @@ public void initialize(){
 	tekscik.setEditable(false);
 	applicationController.setPoints(0);
 	applicationController.setCountQuestions(0);
+	connection = SqliteConnection.Connector();
+	if(connection==null)System.exit(1);
 }
 
 public void writeWrongAnswers(){

@@ -14,7 +14,7 @@
                <font>
                   <Font name="System Bold" size="38.0" />
                </font></Button>
-            <Button mnemonicParsing="false" onAction="#onOptions" prefHeight="75.0" prefWidth="300.0" text="OPCJE">
+            <Button mnemonicParsing="false" onAction="#onOptions" prefHeight="75.0" prefWidth="300.0" text="O PROGRAMIE">
                <VBox.margin>
                   <Insets />
                </VBox.margin>

@@ -5,7 +5,10 @@ import java.io.IOException;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 public class MenuController {
 	private MainController mainController;
@@ -35,7 +38,11 @@ public class MenuController {
 	
 	@FXML
 	public void onOptions(){
-		
+		Alert alert = new Alert(AlertType.INFORMATION);
+		alert.setTitle("O Programie");
+		alert.setHeaderText("Aplikacja w technologii JavaFX do przeprowadzania testów");
+		alert.setContentText("Autor: Pawe³ Czernicki");
+		alert.showAndWait();
 	}
 	
 	@FXML

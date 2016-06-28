@@ -16,6 +16,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+
 public class LoginFormController {
 		Connection connection;
 		private MainController mainController;
@@ -102,20 +103,25 @@ public boolean isLogin(String user, String pass) throws SQLException{
 	public void Login (ActionEvent event){
 		try {
 			if(isLogin(loginLabel.getText(), passwordLabel.getText())){
-				if(loginLabel.getText().equals("admin"))labelInfo.setText("admin");
+				if(loginLabel.getText().equals("admin")){
+					labelInfo.setText("admin");
+					((Node)event.getSource()).getScene().getWindow().hide();
+					Stage primaryStage = new Stage();
+					FXMLLoader loader = new FXMLLoader();
+					Pane root = loader.load(getClass().getResource("/fxml/AdminScreen.fxml").openStream());
+					AdminScreenController adminScreenController = (AdminScreenController)loader.getController();
+					adminScreenController.getUser(loginLabel.getText());
+				Scene scene = new Scene(root);
+				//scene.getStylesheets().add(getClass().getResource("/pc/main/application.css").toExternalForm());
+				primaryStage.setScene(scene);
+					primaryStage.show();
+					
+					
+				}
 				else {
 					labelInfo.setText("zwykly user");
 					loadMenu();
-//					((Node)event.getSource()).getScene().getWindow().hide();
-//					Stage primaryStage = new Stage();
-//					FXMLLoader loader = new FXMLLoader();
-//					Pane root = loader.load(getClass().getResource("/application/User.fxml").openStream());
-//					UserController userController = (UserController)loader.getController();
-//					userController.getUser(txtUsername.getText());
-//					Scene scene = new Scene(root);
-//					scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-//					primaryStage.setScene(scene);
-//					primaryStage.show();
+					
 					
 					
 				}
@@ -125,6 +131,9 @@ public boolean isLogin(String user, String pass) throws SQLException{
 			}
 		} catch (SQLException e) {
 			labelInfo.setText("Nie udalo sie");
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
